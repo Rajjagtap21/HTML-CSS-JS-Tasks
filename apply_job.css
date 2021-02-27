@@ -1,0 +1,33 @@
+body{
+    background-color: gray;
+}
+
+table{
+	border: 1px solid black;
+	background-color:lightgray;
+}
+
+td {
+  text-align: center;
+  padding: 15px;
+}
+
+#employed{
+    display: none;
+}
+.lab{
+    background-color:lightgray ;
+    font-size: 20px;
+    font-weight: bold;
+}
+#submit:hover{
+    background-color: green;
+}
+
+h2{
+    background-color: lightgreen;
+}
+.fr label::after{
+    content: " *";
+    color: red;
+}

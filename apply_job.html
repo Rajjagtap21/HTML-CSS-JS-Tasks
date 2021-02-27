@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Apply for Job</title>
+    <link rel="stylesheet" href="apply_job.css">
+    <script >
+        function show(){
+         var x=document.getElementById("employed");
+                var dispx=x.style.display;
+                if(dispx=='block')
+                {
+                    x.style.display='none';
+                }
+                else
+                {
+                    x.style.display='block';
+                }
+        }
+
+        function valid(){
+            var mob=document.getElementById("mob").value;
+            if(mob.length!=10)
+            {
+                alert("Invalid mobile number");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <center>
+        <h2>Apply job</h2>
+        <form class="fr" onsubmit="return valid();">
+						<table>
+							<tr>
+                            <td><label for="fname" class="lab">First name:</label></td>
+                            <td><input type="text" id="fname" name="fname" placeholder="FIRST NAME" pattern="[A-Za-z ]{3,20}" required></td>
+                            </tr>
+							
+							<tr>
+                            <td><label for="lname" class="lab">Last name:</label></td>
+                            <td><input type="text" id="lname" name="lname" placeholder="LAST NAME" pattern="[A-Za-z ]{1,20}" required></td>
+                            </tr>
+							
+							<tr>
+                            <td><label for="email" class="lab">Employee Email :</label></td>
+                            <td><input type="email" id="email" name="email" placeholder="xyz@gmail.com" required></td>
+                            </tr>
+							
+							<tr>
+                            <td><label for="mob" class="lab">Mobile no. : +91 </label></td>
+                            <td><input type="tel" id="mob" name="mob" placeholder="mobile number" maxlength="10" pattern="[7-9]{1}[0-9]{9}" required></td>
+							</tr>
+							
+							<tr>
+                            <td><label for="city" class="lab">City :</label></td>
+                            <td><input type="text" id="city" name="city" placeholder="Enter city" pattern="[A-Za-z ]{3,20}" required></td>
+							</tr>
+							
+							<tr>
+                            <td><label for="state" class="lab">State :</label></td>
+                            <td><input type="text" id="state" name="state" placeholder="Enter state" pattern="[A-Za-z ]{3,20}" required></td>
+							</tr>
+							
+							<tr>
+                            <td><label for="zip" class="lab">Zip :</label></td>
+                            <td><input type="text" id="zip" name="zip" placeholder="Enter zip" pattern="[0-9]{6}" required></td>
+							</tr>
+							
+							<tr>
+                            <td><label for="contry" class="lab">Country :</label></td>
+                            <td><select id="cntr" name="cntr" required>
+                                <option>India</option>
+                                <option>USA</option>
+                                <option>UK</option>
+                                <option>Brazil</option>
+                                <option>Canada</option>
+                                <option>Japan</option>
+								<option>Austrelia</option>
+								<option>China</option>
+								<option>Korea</option>
+								<option>Russia</option>
+                                <option>Other</option>
+                            </select></td>
+							</tr>
+							
+							<tr>
+                            <td><label for="edul" class="lab">Education Level :</label></td>
+                            <td><select id="edul">
+                                <option>Under Graduate</option>
+                                <option>Graduate</option>
+                                <option>Post Graduate</option>
+                            </select></td>
+							</tr>
+							
+							<tr>
+                            <td><label for="res" class="lab">Upload your resume</label></td>
+                            <td><input type="file" id="res" name="res" accept=".doc,.docx,.pdf" required></td>
+							</tr>
+							
+							<tr>
+                            <td><label for="covl" class="lab">Cover Letter:</label></td>
+                            <td><textarea id="covl" pattern="[A-Za-z0-9 ]"> </textarea></td>
+							</tr>
+						</table>
+							<br><br>
+                            <input type="checkbox" id="empd" name="empd" onclick="show()">
+                            <label for="empld" class="lab">Tick here if you are Employed</label><br><br>
+
+                            <div id="employed">
+							<table>
+                                <tr>
+								<td><label for="curemp" class="lab">Current Employer :</label></td>
+                                <td><input type="text" id="curemp" name="curemp"></td>
+								</tr>
+                                
+								<tr>
+								<td><label for="exp" class="lab">Years of Experience :</label></td>
+                                <td><input type="number" id="exp" name="exp"></td>
+								</tr>
+                                
+								<tr>
+								<td><label for="apply" class="lab">Select jobs you want to apply :</label></td>
+                                <td><select id="apply" multiple>
+                                    <option value="pg">Programmer</option>
+                                    <option value="sup">Support</option>
+                                    <option value="hr">HR</option>
+                                    <option value="train">Trainer</option>
+									<option value="test">Tester</option>
+									<option value="pm">Project manager</option>
+                                </select></td>
+								</tr>
+							</table>
+                                
+                            </div>
+							<br>
+                            <input type="submit" id="submit" value="SUBMIT">
+                            
+                            
+
+                            
+        </form>
+    </center>
+</body>
+</html>

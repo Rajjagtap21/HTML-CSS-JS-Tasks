@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="create_job.css">
+    <title>Enter Job Data</title>
+    <script>
+        function validate()
+        {
+            //alert("ok");
+            var od=document.getElementById("opdate").value;
+            var today = new Date();
+            if(new Date(od)<today){
+                alert("Invalid date.");
+                return false;
+            }
+            return true;
+           
+        }
+    </script>
+</head>
+<body>
+    <center>
+        <p id="demo"> </p>
+        <h2>Create Job</h2>
+    <form action="#" class="fr">
+		<table>
+		<tr>
+        <td><label for="title" class="lab">Title :</label></td>
+        <td><input type="text" id="title" name="title" placeholder="Enter title here" pattern="[A-Za-z ]" required></td>
+        </tr>
+		
+		<tr>
+        <td><label for="type" class="lab">Type :</label></td>
+        <td><select id="type" name="type" required>
+            <option>Program Analyst Trainee</option>
+            <option>Engineer Trainee</option>
+            <option>Programmer Trainee</option>
+            <option>Senior Developer</option>
+			
+        </select></td>
+		</tr>
+		
+		<tr>
+        <td><label for="dept" class="lab">Department :</label></td>
+        <td><select id="dept" name="dept" required>
+            <option>Banking</option>
+            <option>Life Science</option>
+            <option>Cyber Security</option>
+			<option>Health Care</option>
+			<option>Transportation</option>
+        </select></td>
+		</tr>
+		
+		<tr>
+        <td><label for="contry" class="lab">Country :</label></td>
+        <td><select id="cntr" name="cntr" default="India" required>
+            <option>India</option>
+            <option>USA</option>
+            <option>UK</option>
+            <option>Brazil</option>
+            <option>Canada</option>
+			<option>Japan</option>
+			<option>Austrelia</option>
+			<option>China</option>
+			<option>Korea</option>
+			<option>Russia</option>
+            <option>Other</option>
+        </select>
+		</td>
+		</tr>
+		
+		<tr>
+        <td><label for="opdate" class="lab">Opening Date :</label></td>
+        <td><input type="date" id="opdate" name="opdate" onchange="return validate()" required></td>
+		</tr>
+		
+		<tr>
+        <td><label for="descrp" class="lab">Description :</label></td>
+        <td><textarea id="descrp" name="descrp" pattern="[A-Za-z0-9 ]" required></textarea></td>
+		</tr>
+		
+		</table>
+		<br><br>
+        <input type="submit" id="submit" value="SUBMIT">
+    </center>
+    </form>
+    
+</body>
+</html>
